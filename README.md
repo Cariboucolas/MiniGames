@@ -4,11 +4,11 @@
 ## Project 2 : Mini Games
 This is the second project of cursus september 2020 on Toulouse.
 
-Create a Tic Tac Toe and a Handman Game with C#.
+Create a Tic Tac Toe and a Hangman Game with C#.
  
 
 ## Authors
 - Colas Durcy Alias "LE BOSS"
 - Fabien Desnoues
 - Gabriel Said Omar 
-- Maïlys Dumas
+- Maïlys Dumas Alias "Kaly"
