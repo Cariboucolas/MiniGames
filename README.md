@@ -9,6 +9,6 @@ Create a Tic Tac Toe and a Handman Game with C#.
 
 ## Authors
 - Colas Durcy Alias "LE BOSS"
-- Fabien Desnoues
-- Gabriel Said Omar 
-- Maïlys Dumas
+- Fabien Desnoues "LE MAC"
+- Gabriel Said Omar "LE BLACK"
+- Maïlys Dumas "LA GIRL"
