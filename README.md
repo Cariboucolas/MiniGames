@@ -9,6 +9,6 @@ Create a Tic Tac Toe and a Hangman Game with C#.
 
 ## Authors
 - Colas Durcy Alias "LE BOSS"
-- Fabien Desnoues
-- Gabriel Said Omar 
+- Fabien Desnoues "Le MAC"
+- Gabriel Said Omar "Le BLACK"
 - Maïlys Dumas Alias "Kaly"
