@@ -12,3 +12,6 @@ Create a Tic Tac Toe and a Hangman Game with C#.
 - Fabien Desnoues "Le MAC"
 - Gabriel Said Omar "Le BLACK"
 - Maïlys Dumas Alias "Kaly"
+
+
+Un homme sans culture, c'est comme un zèbre sans rayure.
