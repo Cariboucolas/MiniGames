@@ -18,7 +18,7 @@ namespace Project2
             {
                
                     keyInfo = Console.ReadKey(true);
-                if (keyInfo.Key != ConsoleKey.Backspace && keyInfo.Key != ConsoleKey.Enter)
+               if (keyInfo.Key != ConsoleKey.Backspace && keyInfo.Key != ConsoleKey.Enter && keyInfo.Key != ConsoleKey.Spacebar)
                 {
                     password += keyInfo.KeyChar;
                     Console.Write("*");
@@ -28,6 +28,9 @@ namespace Project2
 
             int longeurmot = password.Count();
             Console.Write("ton mot comporte {0} carateres", longeurmot);
+            
+                
+           
         }
       
       
