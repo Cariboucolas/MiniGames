@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Project2;
+using System;
+using System.Collections.Generic;
 
-namespace Project2
+class MainClass
 {
     class Program
     {
@@ -15,7 +17,9 @@ namespace Project2
             Console.WriteLine("****************************************");
 
 
-            Console.WriteLine("Choose a game:");
+            Mot.mot();
+            Life afficherLife = new Life();
+            Console.WriteLine("\nTu possède actuellement :" + afficherLife.GetLife() + " vie");
         }
     }
 }
