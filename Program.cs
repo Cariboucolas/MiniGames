@@ -13,9 +13,6 @@ namespace Project2
             Console.WriteLine("**                                    **");
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
-
-
-            Console.WriteLine("Choose a game:");
         }
     }
 }
