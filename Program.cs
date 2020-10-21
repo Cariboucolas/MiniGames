@@ -6,7 +6,16 @@ namespace Project2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("****************************************");
+            Console.WriteLine("****************************************");
+            Console.WriteLine("**                                    **");
+            Console.WriteLine("**             Wild Games             **");
+            Console.WriteLine("**                                    **");
+            Console.WriteLine("****************************************");
+            Console.WriteLine("****************************************");
+
+
+            Console.WriteLine("Choose a game:");
         }
     }
 }
