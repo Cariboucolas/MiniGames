@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 
 namespace Project2
@@ -15,11 +16,18 @@ namespace Project2
             ConsoleKeyInfo keyInfo;
             do
             {
-                keyInfo = Console.ReadKey(true);
-                password += keyInfo.KeyChar;
-                Console.Write("*");
+               
+                    keyInfo = Console.ReadKey(true);
+                if (keyInfo.Key != ConsoleKey.Backspace && keyInfo.Key != ConsoleKey.Enter)
+                {
+                    password += keyInfo.KeyChar;
+                    Console.Write("*");
+                }
             }
             while (keyInfo.Key != ConsoleKey.Enter);
+
+            int longeurmot = password.Count();
+            Console.Write("ton mot comporte {0} carateres", longeurmot);
         }
       
       

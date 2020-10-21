@@ -17,7 +17,7 @@ class MainClass
             Console.WriteLine("****************************************");
 
 
-            Console.WriteLine("Choose a game:");
+            Mot.mot();
         }
     }
 }

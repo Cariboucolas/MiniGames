@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Life
 {
@@ -6,7 +7,7 @@ public class Life
 
 	public void life(int life)
 	{
-		life = Mot.Count() - 2; 
+		life = 10; 
 		if (_life > 0)
         {
 			this._life = life - 1;
