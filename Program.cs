@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Project2;
+using System;
+using System.Collections.Generic;
 
-namespace Project2
+class MainClass
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
@@ -13,6 +15,7 @@ namespace Project2
             Console.WriteLine("**                                    **");
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
+
 
             Console.WriteLine("Choose a game:");
         }
