@@ -9,6 +9,18 @@ namespace lumiere
         static int win_H;
         static void Main(string[] args)
         {
+            Console.WriteLine("****************************************");
+            Console.WriteLine("****************************************");
+            Console.WriteLine("**                                    **");
+            Console.WriteLine("**             Wild Games             **");
+            Console.WriteLine("**                                    **");
+            Console.WriteLine("****************************************");
+            Console.WriteLine("****************************************");
+
+
+            Console.WriteLine("Choose a game:");
+
+        
             Boolean running = true;
             win_W = Console.WindowWidth;
             win_H = Console.WindowHeight;
@@ -16,11 +28,12 @@ namespace lumiere
             int slct = 0;
             // int1 is posX, int2 is posY, string is the text you want to show as the option and boolean shows if its selected
             List<Tuple<int, int, string, Boolean>> opts = new List<Tuple<int, int, string, Boolean>>
-        {
-            new Tuple<int, int, string, Boolean>((win_W/2)-10, (win_H / 2) - 5, "OPTION 1", true),
+            {
+            new Tuple<int, int, string, Boolean>((win_W/2)-4, (win_H / 2) - 5, "OPTION 1", true),
             new Tuple<int, int, string, Boolean>((win_W/2)-4, (win_H / 2) - 4, "OPTION 2", false),
             new Tuple<int, int, string, Boolean>((win_W/2)-4, (win_H / 2) - 3, "OPTION 3", false),
-        };
+            };
+
             while (running == true)
             {
                 foreach (Tuple<int, int, string, Boolean> tupe in opts)
@@ -64,6 +77,6 @@ namespace lumiere
                     opts[slct] = new Tuple<int, int, string, bool>(opts[slct].Item1, opts[slct].Item2, opts[slct].Item3, true);
                 }
             }
-        }
+        }   
     }
 }
