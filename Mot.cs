@@ -27,7 +27,7 @@ namespace Project2
             while (keyInfo.Key != ConsoleKey.Enter);
 
             int longeurmot = password.Count();
-            Console.Write("ton mot comporte {0} carateres", longeurmot);
+            Console.Write("\nTon mot comporte {0} caratères.", longeurmot);
             
                 
            

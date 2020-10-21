@@ -19,7 +19,7 @@ class MainClass
 
             Mot.mot();
             Life afficherLife = new Life();
-            Console.WriteLine("\nTu possède actuellement :" + afficherLife.GetLife() + " vie");
+            Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vie.");
         }
     }
 }
