@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace lumiere
+namespace Project2
 {
     class Program
     {
