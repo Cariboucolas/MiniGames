@@ -1,12 +1,12 @@
 ﻿using Project2;
 using System;
-using System.Collections.Generic;
+using System.Linq;
 
-class MainClass
+internal class MainClass
 {
-    class Program
+    private class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
@@ -16,10 +16,9 @@ class MainClass
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
 
-
             Mot.mot();
             Life afficherLife = new Life();
-            Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vie.");
+            Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vies(s).");
         }
     }
 }
