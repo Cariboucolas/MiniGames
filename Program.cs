@@ -5,30 +5,15 @@ namespace lumiere
 {
     class Program
     {
-        static int win_W;
-        static int win_H;
+        /*static int win_W;
+        static int win_H;*/
         static void Main(string[] args)
         {
+            DisplayWelcome();
+            DisplayLogo();
+            DisplayChoiceMenu();
             
-            Console.WriteLine("       ```           ```              ");  
-            Console.WriteLine("    -//::/+:.     -//////:`    -/++/. ");  
-            Console.WriteLine("   :+.    `:+.   :/.    `/+.  -+-  /+ ");  
-            Console.WriteLine("  `+/  -/`  +/       :/  `+:  -+.  :+`");  
-            Console.WriteLine("   /-  :+`  /+       /+` `+/  -+.  :+`");  
-            Console.WriteLine("       :+`  /+  .+.  /+` `+/  `.`  :+`");  
-            Console.WriteLine("   `   :+`  /+  -+-  /+` `+/       :+`");  
-            Console.WriteLine("   +/  :+`  /+  .+-  /+` `+/  `.   :+`");  
-            Console.WriteLine("   +/  -+.  `.  -+.  :+.  .`  :+.  // ");  
-            Console.WriteLine("   :+` `//-```.-+:   `//-````:+-      ");  
-            Console.WriteLine("   `//`  .:://:-`  ``  .:///:-`  `    ");  
-            Console.WriteLine("    `:+:        `-////-`      `.//`   ");  
-            Console.WriteLine("      ``    `:/+/:.  .-/+/::://:.     ");  
-            Console.WriteLine("             ``          ````         ");        
-
-            Console.WriteLine("Choose a game:");
-
-        
-            Boolean running = true;
+            /*Boolean running = true;
             win_W = Console.WindowWidth;
             win_H = Console.WindowHeight;
             Console.CursorVisible = false;
@@ -36,9 +21,9 @@ namespace lumiere
             // int1 is posX, int2 is posY, string is the text you want to show as the option and boolean shows if its selected
             List<Tuple<int, int, string, Boolean>> opts = new List<Tuple<int, int, string, Boolean>>
             {
-            new Tuple<int, int, string, Boolean>((win_W/2)-4, (win_H / 2) - 5, "OPTION 1", true),
-            new Tuple<int, int, string, Boolean>((win_W/2)-4, (win_H / 2) - 4, "OPTION 2", false),
-            new Tuple<int, int, string, Boolean>((win_W/2)-4, (win_H / 2) - 3, "OPTION 3", false),
+            new Tuple<int, int, string, Boolean>(0, 26, "*   JEU DU PENDU **", true),
+            new Tuple<int, int, string, Boolean>(19, 26, " JEU DU MORPION   *", false),
+            new Tuple<int, int, string, Boolean>(40, 30, "OPTION 3", false),
             };
 
             while (running == true)
@@ -83,7 +68,56 @@ namespace lumiere
                     slct += 1;
                     opts[slct] = new Tuple<int, int, string, bool>(opts[slct].Item1, opts[slct].Item2, opts[slct].Item3, true);
                 }
-            }
-        }   
+            }*/
+        }
+
+        
+
+        static void DisplayWelcome() 
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("**************************************");
+            Console.WriteLine("**************************************");
+            Console.WriteLine("*                                    *");
+            Console.WriteLine("*   BIENVENUE AU WILD CODE GAME !!   *");
+            Console.WriteLine("*                                    *");
+            Console.WriteLine("**************************************");
+            Console.WriteLine("**************************************");
+        }
+
+        static void DisplayChoiceMenu() 
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("**************************************");
+            Console.WriteLine("**************************************");
+            Console.WriteLine("*                                    *");
+            Console.WriteLine("*          CHOISIS TON JEU :         *");
+            Console.WriteLine("*         (Entrer une valeur)        *");
+            Console.WriteLine("**************************************");
+            Console.WriteLine("**************************************");
+            Console.WriteLine("*                **                  *");
+            Console.WriteLine("*    1. PENDU    **    2. MORPION    *");
+            Console.WriteLine("*                **                  *");
+            Console.WriteLine("**************************************");
+            Console.WriteLine("**************************************");
+        }
+        static void DisplayLogo() 
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("      ```           ```              ");  
+            Console.WriteLine("   -//::/+:.     -//////:`    -/++/. ");  
+            Console.WriteLine("  :+.    `:+.   :/.    `/+.  -+-  /+ ");  
+            Console.WriteLine(" `+/  -/`  +/       :/  `+:  -+.  :+`");  
+            Console.WriteLine("  /-  :+`  /+       /+` `+/  -+.  :+`");  
+            Console.WriteLine("      :+`  /+  .+.  /+` `+/  `.`  :+`");  
+            Console.WriteLine("  `   :+`  /+  -+-  /+` `+/       :+`");  
+            Console.WriteLine("  +/  :+`  /+  .+-  /+` `+/  `.   :+`");  
+            Console.WriteLine("  +/  -+.  `.  -+.  :+.  .`  :+.  // ");  
+            Console.WriteLine("  :+` `//-```.-+:   `//-````:+-      ");  
+            Console.WriteLine("  `//`  .:://:-`  ``  .:///:-`  `    ");  
+            Console.WriteLine("   `:+:        `-////-`      `.//`   ");  
+            Console.WriteLine("     ``    `:/+/:.  .-/+/::://:.     ");  
+            Console.WriteLine("            ``          ````         ");        
+        }
     }
 }
