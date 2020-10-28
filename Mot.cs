@@ -41,5 +41,9 @@ namespace Project2
                 Console.Write(" _ ");
             }
         } 
+        public void CreateCharArray()
+        {
+            char[] passWordTable = _password.ToCharArray();
+        }
     }
 }

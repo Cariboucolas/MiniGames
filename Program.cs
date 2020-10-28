@@ -19,6 +19,8 @@ internal class MainClass
             Mot Word = new Mot();
             Word.Word();
             Word.Word_();
+
+            Player2.tapeOneChar();
      
             Life afficherLife = new Life();
 
