@@ -1,12 +1,12 @@
 ﻿using Project2;
 using System;
-using System.Collections.Generic;
+using System.Linq;
 
-class MainClass
+internal class MainClass
 {
-    class Program
+    private class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
