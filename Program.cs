@@ -16,9 +16,13 @@ internal class MainClass
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
 
-            Mot.mot();
+            Mot Word = new Mot();
+            Word.Word();
+            Word.Word_();
+     
             Life afficherLife = new Life();
-            Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vies(s).");
+
+            Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vie(s).");
 
         }
     }
