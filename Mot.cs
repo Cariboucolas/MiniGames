@@ -9,7 +9,7 @@ namespace Project2
     public class Mot
     {
 
-        public static void mot()
+        public static void Word()
         {
             string password = "";
             Console.Write("Entre un mot en français : ");
@@ -26,8 +26,8 @@ namespace Project2
             }
             while (keyInfo.Key != ConsoleKey.Enter);
 
-            int longeurmot = password.Count();
-            Console.Write("\nTon mot comporte {0} caratères.", longeurmot);
+            int wordLength = password.Count();
+            Console.Write("\nTon mot comporte {0} caratères.", wordLength);
             
                 
            

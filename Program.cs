@@ -17,9 +17,9 @@ class MainClass
             Console.WriteLine("****************************************");
 
 
-            Mot.mot();
+            Mot.Word();
             Life afficherLife = new Life();
-            Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vie.");
+            Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vie(s).");
         }
     }
 }
