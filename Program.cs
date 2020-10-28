@@ -19,6 +19,7 @@ internal class MainClass
             Mot.mot();
             Life afficherLife = new Life();
             Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vies(s).");
+
         }
     }
 }
