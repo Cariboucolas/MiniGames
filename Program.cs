@@ -12,6 +12,13 @@ namespace lumiere
             DisplayWelcome();
             DisplayLogo();
             DisplayChoiceMenu();
+            int playerChoice = Convert.ToInt32(Console.ReadLine());
+            
+        public void GameChoice()
+        {
+            Project2.Mot cl1 = new Project2.Mot();
+            Project2.tictactoe cl2 = new Project2.tictactoe();
+        }
             
             /*Boolean running = true;
             win_W = Console.WindowWidth;
