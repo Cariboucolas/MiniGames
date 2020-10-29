@@ -26,10 +26,8 @@ namespace Project2
                 }
             }
             while (keyInfo.Key != ConsoleKey.Enter);
-
-
-            
         }
+
         public void ChangeLetter()
         {
 
@@ -67,9 +65,5 @@ namespace Project2
                 Console.Write(" _ ");
             }
         } 
-        
-        
-        
-
     }
 }

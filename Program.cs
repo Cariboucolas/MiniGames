@@ -11,7 +11,7 @@ internal class MainClass
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
             Console.WriteLine("**                                    **");
-            Console.WriteLine("**             Wild Games             **");
+            Console.WriteLine("**             PENDU                  **");
             Console.WriteLine("**                                    **");
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
@@ -20,13 +20,9 @@ internal class MainClass
             Word.Word();
             Word.Word_();
 
-            Player2 player2 = new Player2();
-            //player2.tapeOneChar();
-            
+            Player2 player2 = new Player2();            
             Word.ChangeLetter();
-            
-
-     
+    
             Life afficherLife = new Life();
 
             Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vie(s).");
