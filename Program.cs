@@ -12,7 +12,7 @@ namespace Project2
             DisplayChoiceMenu();
             int playerChoice = Convert.ToInt32(Console.ReadLine());
 
-            do
+           
                 if (playerChoice == 1)
                 {
                     Console.Clear();
@@ -26,9 +26,8 @@ namespace Project2
                 else
                 {
                     Console.WriteLine("Veuillez choisir une valeur 1, pour le Pendu ou 2, pour le Morpion.");
-
-                }
-            while (true);
+                    playerChoice = Convert.ToInt32(Console.ReadLine());
+            }
             
         }
 
