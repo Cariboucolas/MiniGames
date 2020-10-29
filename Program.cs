@@ -10,6 +10,17 @@ internal class MainClass
         private static Mot _word = new Mot();
         private static void Main(string[] args)
         {
+
+            Console.WriteLine("****************************************");
+            Console.WriteLine("****************************************");
+            Console.WriteLine("**                                    **");
+            Console.WriteLine("**                PENDU               **");
+            Console.WriteLine("**                                    **");
+            Console.WriteLine("****************************************");
+            Console.WriteLine("****************************************");
+
+            
+
             DisplayWelcome();
             DisplayLogo();
             DisplayChoiceMenu();
@@ -17,8 +28,7 @@ internal class MainClass
 
             if (playerChoice == 1)
             {
-                Console.Clear();
-                _word.Word();
+                _word.Run();
             }
             /*else if (playerChoice == 2)
             {
@@ -43,7 +53,7 @@ internal class MainClass
             Console.WriteLine("**************************************");
         }
 
-        static void DisplayChoiceMenu()
+        static void DisplayChoiceMenu() 
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("**************************************");
@@ -78,8 +88,7 @@ internal class MainClass
             Console.WriteLine("     ``    `:/+/:.  .-/+/::://:.     ");
             Console.WriteLine("            ``          ````         ");
 
-            Life afficherLife = new Life();
-            Console.WriteLine("\nTu possèdes actuellement :" + afficherLife.GetLife() + " vie");
+            Console.WriteLine("\nTu possèdes actuellement :" + Life.GetLife() + " vie");
         }
     }
 }

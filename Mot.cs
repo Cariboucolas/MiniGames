@@ -1,6 +1,7 @@
 ﻿using System; 
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Threading.Channels;
 
@@ -10,9 +11,34 @@ namespace Project2
     {
         private int _wordLength;
         private string _password;
-       
-        public void Word()
+        private bool[] _lettersRevealed;
+
+        // Fait tourner la boucle du jeu
+        public void Run()
         {
+            PromptWord();
+            while (Life.GetLife() > 0)
+            {
+                Console.Clear();
+                ConsoleKeyInfo _letter = Console.ReadKey(true);
+                Char _letterCompare = _letter.KeyChar;
+
+                if (_password.Contains(_letterCompare)) // Si le mot contient la lettre tapée
+                {
+                    RevealLetters(_letterCompare);
+                }
+                else
+                {
+                    Life.SetLife(Life.GetLife() - 1);
+                }
+                DisplayWord();
+            }
+        }
+
+        // Récupère le mot via l'entrée standard
+        public void PromptWord()
+        {
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Entre un mot en français : ");
             ConsoleKeyInfo keyInfo;
@@ -26,43 +52,41 @@ namespace Project2
                 }
             }
             while (keyInfo.Key != ConsoleKey.Enter);
+            _lettersRevealed = new bool[_password.Length];
+            for (int i = 0; i < _lettersRevealed.Length; i++)
+            {
+                _lettersRevealed[i] = false;
+            }
         }
 
-        public void ChangeLetter()
+        // Révéler dans le tableau de booléens une lettres trouvée dans le mot
+        private void RevealLetters(char letter)
         {
-            ConsoleKeyInfo _letter = Console.ReadKey(true);
-            string _letterCompare = Convert.ToString(_letter.KeyChar);
-                
-            Console.Clear();
+            for (int i=0; i < _password.Length; i++)
+            {
+                if (_password[i] == letter)
+                {
+                    _lettersRevealed[i] = true;
+                }
+            }
+        }
 
+        // Afficher le mot en fonction du tableau de booléens
+        private void DisplayWord()
+        {
             for (int i = 0; i < _password.Length; i++)
             {
-                string c = Convert.ToString(_password[i]);
-                if (_letterCompare.Contains(c))
+                if (/* si il y a true à l'indice i, affiche la lettre */true)
                 {
-                    Console.Write(c);
+                    Console.Write(_password[i]);
                 }
                 else
                 {
                     Console.Write(" _ ");
                 }
-
             }
         }
-
-        public void Word_()
-        {
-            Console.Clear();
-
-            _wordLength = _password.Count();
-            Console.Write("\nTon mot comporte {0} caratères: ", _wordLength);
-
-            for(int i = 0; i < _wordLength; i++)
-            {
-                Console.Write(" _ ");
-            }
-        }
-
+                
         public void DisplayMenuMot()
         {
             Console.WriteLine(" ********");
