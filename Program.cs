@@ -7,6 +7,7 @@ internal class MainClass
 {
     private class Program
     {
+        private static Mot _word = new Mot();
         private static void Main(string[] args)
         {
             DisplayWelcome();
@@ -17,8 +18,7 @@ internal class MainClass
             if (playerChoice == 1)
             {
                 Console.Clear();
-                Mot choiceMot = new Mot();
-                choiceMot.DisplayMenuMot();
+                _word.Word();
             }
             /*else if (playerChoice == 2)
             {
@@ -78,7 +78,6 @@ internal class MainClass
             Console.WriteLine("     ``    `:/+/:.  .-/+/::://:.     ");
             Console.WriteLine("            ``          ````         ");
 
-            // Mot.mot();
             Life afficherLife = new Life();
             Console.WriteLine("\nTu possèdes actuellement :" + afficherLife.GetLife() + " vie");
         }

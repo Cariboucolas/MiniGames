@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System; 
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -32,7 +32,7 @@ namespace Project2
         {
             ConsoleKeyInfo _letter = Console.ReadKey(true);
             string _letterCompare = Convert.ToString(_letter.KeyChar);
-
+                
             Console.Clear();
 
             for (int i = 0; i < _password.Length; i++)
