@@ -30,9 +30,6 @@ namespace Project2
 
         public void ChangeLetter()
         {
-
-
-
             ConsoleKeyInfo _letter = Console.ReadKey(true);
             string _letterCompare = Convert.ToString(_letter.KeyChar);
 
@@ -64,6 +61,17 @@ namespace Project2
             {
                 Console.Write(" _ ");
             }
-        } 
+        }
+
+        public void DisplayMenuMot()
+        {
+            Console.WriteLine(" ********");
+            Console.WriteLine(" **    |");
+            Console.WriteLine(" **    @");
+            Console.WriteLine(" **   // ");
+            Console.WriteLine(" **   // ");
+            Console.WriteLine(" **      ");
+            Console.WriteLine("**********");
+        }
     }
 }

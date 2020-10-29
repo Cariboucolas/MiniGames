@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using Project2;
 
 internal class MainClass
 {
@@ -13,26 +14,22 @@ internal class MainClass
             DisplayChoiceMenu();
             int playerChoice = Convert.ToInt32(Console.ReadLine());
 
-           
-                if (playerChoice == 1)
-                {
-                    Console.Clear();
-                    Mot choiceMot = new Mot();
-                    choiceMot.DisplayMenuMot();
-                }
-                /*else if (playerChoice == 2)
-                {
-                    GameChoiceTwo();
-                }*/
-                else
-                {
-                    Console.WriteLine("Veuillez choisir une valeur 1, pour le Pendu ou 2, pour le Morpion.");
-                    playerChoice = Convert.ToInt32(Console.ReadLine());
+            if (playerChoice == 1)
+            {
+                Console.Clear();
+                Mot choiceMot = new Mot();
+                choiceMot.DisplayMenuMot();
             }
-            
+            /*else if (playerChoice == 2)
+            {
+                GameChoiceTwo();
+            }*/
+            else
+            {
+                Console.WriteLine("Veuillez choisir une valeur 1, pour le Pendu ou 2, pour le Morpion.");
+                playerChoice = Convert.ToInt32(Console.ReadLine());
+            }
         }
-
-
 
         static void DisplayWelcome() 
         {
@@ -46,20 +43,7 @@ internal class MainClass
             Console.WriteLine("**************************************");
         }
 
-            /*Mot Word = new Mot();
-            Word.Word();
-            Word.Word_();
-            Player2 player2 = new Player2();            
-            Word.ChangeLetter();
-    
-            Life afficherLife = new Life();
-
-            Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vie(s).");*/
-
-        }
-    }
-}
-        static void DisplayChoiceMenu() 
+        static void DisplayChoiceMenu()
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("**************************************");
@@ -75,42 +59,29 @@ internal class MainClass
             Console.WriteLine("**************************************");
             Console.WriteLine("**************************************");
         }
-        static void DisplayLogo() 
+
+        static void DisplayLogo()
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine("      ```           ```              ");  
-            Console.WriteLine("   -//::/+:.     -//////:`    -/++/. ");  
-            Console.WriteLine("  :+.    `:+.   :/.    `/+.  -+-  /+ ");  
-            Console.WriteLine(" `+/  -/`  +/       :/  `+:  -+.  :+`");  
-            Console.WriteLine("  /-  :+`  /+       /+` `+/  -+.  :+`");  
-            Console.WriteLine("      :+`  /+  .+.  /+` `+/  `.`  :+`");  
-            Console.WriteLine("  `   :+`  /+  -+-  /+` `+/       :+`");  
-            Console.WriteLine("  +/  :+`  /+  .+-  /+` `+/  `.   :+`");  
-            Console.WriteLine("  +/  -+.  `.  -+.  :+.  .`  :+.  // ");  
-            Console.WriteLine("  :+` `//-```.-+:   `//-````:+-      ");  
-            Console.WriteLine("  `//`  .:://:-`  ``  .:///:-`  `    ");  
-            Console.WriteLine("   `:+:        `-////-`      `.//`   ");  
-            Console.WriteLine("     ``    `:/+/:.  .-/+/::://:.     ");  
-            Console.WriteLine("            ``          ````         ");        
+            Console.WriteLine("      ```           ```              ");
+            Console.WriteLine("   -//::/+:.     -//////:`    -/++/. ");
+            Console.WriteLine("  :+.    `:+.   :/.    `/+.  -+-  /+ ");
+            Console.WriteLine(" `+/  -/`  +/       :/  `+:  -+.  :+`");
+            Console.WriteLine("  /-  :+`  /+       /+` `+/  -+.  :+`");
+            Console.WriteLine("      :+`  /+  .+.  /+` `+/  `.`  :+`");
+            Console.WriteLine("  `   :+`  /+  -+-  /+` `+/       :+`");
+            Console.WriteLine("  +/  :+`  /+  .+-  /+` `+/  `.   :+`");
+            Console.WriteLine("  +/  -+.  `.  -+.  :+.  .`  :+.  // ");
+            Console.WriteLine("  :+` `//-```.-+:   `//-````:+-      ");
+            Console.WriteLine("  `//`  .:://:-`  ``  .:///:-`  `    ");
+            Console.WriteLine("   `:+:        `-////-`      `.//`   ");
+            Console.WriteLine("     ``    `:/+/:.  .-/+/::://:.     ");
+            Console.WriteLine("            ``          ````         ");
 
-            Mot.mot();
+            // Mot.mot();
             Life afficherLife = new Life();
-            Console.WriteLine("\nTu possède actuellement :" + afficherLife.GetLife() + " vie");
-
+            Console.WriteLine("\nTu possèdes actuellement :" + afficherLife.GetLife() + " vie");
         }
     }
-    /*class Mot 
-    {
-        public void DisplayMenuMot()
-        {
-        Console.WriteLine(" ********");  
-        Console.WriteLine(" **    |");  
-        Console.WriteLine(" **    @");
-        Console.WriteLine(" **   // "); 
-        Console.WriteLine(" **   // "); 
-        Console.WriteLine(" **      ");
-        Console.WriteLine("**********");
-        }      
-    }*/
 }
 
