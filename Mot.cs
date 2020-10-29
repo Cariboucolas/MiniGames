@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Threading.Channels;
 
@@ -30,27 +31,27 @@ namespace Project2
 
         public void ChangeLetter()
         {
-
-
-
-            ConsoleKeyInfo _letter = Console.ReadKey(true);
-            string _letterCompare = Convert.ToString(_letter.KeyChar);
-
-            Console.Clear();
-
-            for (int i = 0; i < _password.Length; i++)
+            do
             {
-                string c = Convert.ToString(_password[i]);
-                if (_letterCompare.Contains(c))
-                {
-                    Console.Write(c);
-                }
-                else
-                {
-                    Console.Write(" _ ");
-                }
+                ConsoleKeyInfo _letter = Console.ReadKey(true);
+                string _letterCompare = Convert.ToString(_letter.KeyChar);
 
+                Console.Clear();
+
+                for (int i = 0; i < _password.Length; i++)
+                {
+                    string c = Convert.ToString(_password[i]);
+                    if (_letterCompare.Contains(c))
+                    {
+                        Console.Write(c);
+                    }
+                    else
+                    {
+                        Console.Write(" _ ");
+                    }
+                }
             }
+            while ()//(Life.GetLife()  != 0);
         }
 
         public void Word_()

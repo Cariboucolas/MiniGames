@@ -11,7 +11,7 @@
         }
     }
 
-    public int GetLife()
+    public  int GetLife()
     {
         return _life;
     }

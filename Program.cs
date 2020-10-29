@@ -11,7 +11,7 @@ internal class MainClass
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
             Console.WriteLine("**                                    **");
-            Console.WriteLine("**             PENDU                  **");
+            Console.WriteLine("**                PENDU               **");
             Console.WriteLine("**                                    **");
             Console.WriteLine("****************************************");
             Console.WriteLine("****************************************");
