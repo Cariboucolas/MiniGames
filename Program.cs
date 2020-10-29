@@ -24,7 +24,7 @@ namespace Project2
             }
             else 
             {
-                
+
             }
 
             static void GameChoiceOne()
@@ -103,7 +103,7 @@ namespace Project2
             Console.WriteLine("**************************************");
             Console.WriteLine("**************************************");
             Console.WriteLine("*                                    *");
-            Console.WriteLine("*   BIENVENUE AU WILD CODE GAME !!   *");
+            Console.WriteLine("*     BIENVENUE SUR WILD GAME !!     *");
             Console.WriteLine("*                                    *");
             Console.WriteLine("**************************************");
             Console.WriteLine("**************************************");
