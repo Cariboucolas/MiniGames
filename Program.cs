@@ -1,7 +1,8 @@
-﻿using System;
+using System;
+
 using System.Collections.Generic;
 
-namespace Project2
+class MainClass
 {
     class Program
     {
@@ -45,6 +46,7 @@ namespace Project2
             Console.WriteLine("**************************************");
         }
 
+
         static void DisplayChoiceMenu() 
         {
             Console.ForegroundColor = ConsoleColor.White;
@@ -78,6 +80,11 @@ namespace Project2
             Console.WriteLine("   `:+:        `-////-`      `.//`   ");  
             Console.WriteLine("     ``    `:/+/:.  .-/+/::://:.     ");  
             Console.WriteLine("            ``          ````         ");        
+
+            Mot.mot();
+            Life afficherLife = new Life();
+            Console.WriteLine("\nTu possède actuellement :" + afficherLife.GetLife() + " vie");
+
         }
     }
     class Mot 
