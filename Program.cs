@@ -20,7 +20,12 @@ internal class MainClass
             Word.Word();
             Word.Word_();
 
-            Player2.tapeOneChar();
+            Player2 player2 = new Player2();
+            //player2.tapeOneChar();
+            
+            Word.ChangeLetter();
+            
+
      
             Life afficherLife = new Life();
 

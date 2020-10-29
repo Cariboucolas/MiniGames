@@ -2,19 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace Project2
 {
     class Player2
     {
-        char player2Char;
+        public char player2Char;
         
-        public static void tapeOneChar()
+        public void tapeOneChar()
         {
-            Console.Write("\nEntre une lettre: ");
+            Console.Write("\n\nEntre une lettre: ");
             ConsoleKeyInfo keyInfo;
 
             keyInfo = Console.ReadKey();
+
+
         }
+
+
     }
+
 }

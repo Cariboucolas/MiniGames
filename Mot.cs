@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Threading.Channels;
 
 namespace Project2
 {
@@ -9,9 +10,10 @@ namespace Project2
     {
         private int _wordLength;
         private string _password;
+       
         public void Word()
         {
-            _password = "";
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Entre un mot en français : ");
             ConsoleKeyInfo keyInfo;
             do
@@ -28,6 +30,30 @@ namespace Project2
 
             
         }
+        public void ChangeLetter()
+        {
+
+
+
+            ConsoleKeyInfo _letter = Console.ReadKey(true);
+            string _letterCompare = Convert.ToString(_letter.KeyChar);
+
+            Console.Clear();
+
+            for (int i = 0; i < _password.Length; i++)
+            {
+                string c = Convert.ToString(_password[i]);
+                if (_letterCompare.Contains(c))
+                {
+                    Console.Write(c);
+                }
+                else
+                {
+                    Console.Write(" _ ");
+                }
+
+            }
+        }
 
         public void Word_()
         {
@@ -41,9 +67,9 @@ namespace Project2
                 Console.Write(" _ ");
             }
         } 
-        public void CreateCharArray()
-        {
-            char[] passWordTable = _password.ToCharArray();
-        }
+        
+        
+        
+
     }
 }
