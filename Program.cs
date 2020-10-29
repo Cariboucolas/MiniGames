@@ -1,12 +1,12 @@
 using System;
-
+using System.Linq;
 using System.Collections.Generic;
 
-class MainClass
+internal class MainClass
 {
-    class Program
+    private class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             DisplayWelcome();
             DisplayLogo();
@@ -46,7 +46,19 @@ class MainClass
             Console.WriteLine("**************************************");
         }
 
+            /*Mot Word = new Mot();
+            Word.Word();
+            Word.Word_();
+            Player2 player2 = new Player2();            
+            Word.ChangeLetter();
+    
+            Life afficherLife = new Life();
 
+            Console.WriteLine("\nTu possèdes actuellement : " + afficherLife.GetLife() + " vie(s).");*/
+
+        }
+    }
+}
         static void DisplayChoiceMenu() 
         {
             Console.ForegroundColor = ConsoleColor.White;
@@ -87,7 +99,7 @@ class MainClass
 
         }
     }
-    class Mot 
+    /*class Mot 
     {
         public void DisplayMenuMot()
         {
@@ -99,5 +111,6 @@ class MainClass
         Console.WriteLine(" **      ");
         Console.WriteLine("**********");
         }      
-    }
+    }*/
 }
+
