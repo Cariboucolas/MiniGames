@@ -13,12 +13,29 @@ namespace Project2
             DisplayLogo();
             DisplayChoiceMenu();
             int playerChoice = Convert.ToInt32(Console.ReadLine());
-            
-        public void GameChoice()
-        {
-            Project2.Mot cl1 = new Project2.Mot();
-            Project2.tictactoe cl2 = new Project2.tictactoe();
-        }
+
+            if (playerChoice == 1)
+            {
+                GameChoiceOne();
+            } 
+            else if (playerChoice == 2)
+            {
+                GameChoiceTwo();
+            }
+            else 
+            {
+                
+            }
+
+            static void GameChoiceOne()
+            {
+                Project2.Mot cl1 = new Project2.Mot();
+            }
+
+            static void GameChoiceTwo()
+            {
+                Project2.tictactoe cl2 = new Project2.tictactoe();
+            }
             
             /*Boolean running = true;
             win_W = Console.WindowWidth;
