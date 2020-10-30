@@ -11,16 +11,6 @@ internal class MainClass
         private static void Main(string[] args)
         {
 
-            Console.WriteLine("****************************************");
-            Console.WriteLine("****************************************");
-            Console.WriteLine("**                                    **");
-            Console.WriteLine("**                PENDU               **");
-            Console.WriteLine("**                                    **");
-            Console.WriteLine("****************************************");
-            Console.WriteLine("****************************************");
-
-            
-
             DisplayWelcome();
             DisplayLogo();
             DisplayChoiceMenu();
