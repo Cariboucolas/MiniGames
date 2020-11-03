@@ -93,9 +93,18 @@ namespace Project2
                 
             }
             Console.Write("\n ");
+            Console.Write("\n ");
             Dessin();
-            Console.WriteLine("\nTu possèdes actuellement :" + Life.GetLife() + " vie");
+            if (Life.GetLife()>0)
+            {
+                Console.WriteLine("\nTu possèdes actuellement :" + Life.GetLife() + " vie");
+            }
+            else
+            {
+                Console.WriteLine("\nLe mot était :" + _password);
+                Console.Write("\n Tu es mort merci de rejouer ");
 
+            }
         }
                 
         public static void Dessin()
