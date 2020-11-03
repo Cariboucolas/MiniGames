@@ -9,7 +9,7 @@ namespace Project2
 {
     public class Mot
     {
-        private int _wordLength;
+       // private int _wordLength;
         private string _password;
         private bool[] _lettersRevealed;
 
@@ -17,11 +17,15 @@ namespace Project2
         public void Run()
         {
             PromptWord();
-            while (Life.GetLife() > 0)
+            DisplayWord();
+            while (Life.GetLife() >= 0)
             {
                 Console.Clear();
+                DisplayWord();
                 ConsoleKeyInfo _letter = Console.ReadKey(true);
                 Char _letterCompare = _letter.KeyChar;
+
+
 
                 if (_password.Contains(_letterCompare)) // Si le mot contient la lettre tapée
                 {
@@ -31,7 +35,7 @@ namespace Project2
                 {
                     Life.SetLife(Life.GetLife() - 1);
                 }
-                DisplayWord();
+                
             }
         }
 
@@ -76,26 +80,165 @@ namespace Project2
         {
             for (int i = 0; i < _password.Length; i++)
             {
-                if (/* si il y a true à l'indice i, affiche la lettre */true)
+                if (/* si il y a true à l'indice i, affiche la lettre */_lettersRevealed[i] == true)
                 {
                     Console.Write(_password[i]);
                 }
                 else
                 {
                     Console.Write(" _ ");
+                    
+
                 }
+                
             }
+            Console.Write("\n ");
+            Dessin();
+            Console.WriteLine("\nTu possèdes actuellement :" + Life.GetLife() + " vie");
+
         }
                 
-        public void DisplayMenuMot()
+        public static void Dessin()
         {
-            Console.WriteLine(" ********");
-            Console.WriteLine(" **    |");
-            Console.WriteLine(" **    @");
-            Console.WriteLine(" **   // ");
-            Console.WriteLine(" **   // ");
-            Console.WriteLine(" **      ");
-            Console.WriteLine("**********");
+            int caseSwitch = Life.GetLife();
+
+            switch (caseSwitch)
+            {
+                case 0:
+                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ||  /      |    ");
+                    Console.WriteLine("     || /       |    ");
+                    Console.WriteLine("     ||/        O    ");
+                    Console.WriteLine("     ||        /|\\  ");
+                    Console.WriteLine("     ||        / \\  ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("    /||              ");
+                    Console.WriteLine("   //||              ");
+                    Console.WriteLine("  ============       ");
+                    
+                    break;
+                case 1:
+                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ||  /      |    ");
+                    Console.WriteLine("     || /       |    ");
+                    Console.WriteLine("     ||/        O    ");
+                    Console.WriteLine("     ||        /|\\  ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("    /||              ");
+                    Console.WriteLine("   //||              ");
+                    Console.WriteLine("  ============       ");
+                   
+                    break;
+                case 2:
+                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ||  /      |    ");
+                    Console.WriteLine("     || /       |    ");
+                    Console.WriteLine("     ||/        O    ");
+                    Console.WriteLine("     ||         |    ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("    /||              ");
+                    Console.WriteLine("   //||              ");
+                    Console.WriteLine("  ============       ");
+                   
+                    break;
+                case 3:
+                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ||  /      |    ");
+                    Console.WriteLine("     || /       |    ");
+                    Console.WriteLine("     ||/        O    ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("    /||              ");
+                    Console.WriteLine("   //||              ");
+                    Console.WriteLine("  ============       ");
+                   
+                    break;
+                case 4:
+                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ||  /      |    ");
+                    Console.WriteLine("     || /       |    ");
+                    Console.WriteLine("     ||/             ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("    /||              ");
+                    Console.WriteLine("   //||              ");
+                    Console.WriteLine("  ============       ");
+                 
+                    break;
+                case 5:
+                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ||  /           ");
+                    Console.WriteLine("     || /            ");
+                    Console.WriteLine("     ||/             ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("    /||              ");
+                    Console.WriteLine("   //||              ");
+                    Console.WriteLine("  ============       ");
+                
+                    break;
+                case 6:
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("     ||  /           ");
+                    Console.WriteLine("     || /            ");
+                    Console.WriteLine("     ||/             ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("    /||              ");
+                    Console.WriteLine("   //||              ");
+                    Console.WriteLine("  ============       ");
+                  
+                    break;
+                case 7:
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("    /||              ");
+                    Console.WriteLine("   //||              ");
+                    Console.WriteLine("  ============       ");
+                   
+                    break;
+                case 8:
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("     ||              ");
+                    Console.WriteLine("  ============       ");
+                 
+                    break;
+                case 9:
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("                     ");
+                    Console.WriteLine("  ============       ");
+                 
+                    break;
+
+                default:
+                    Console.WriteLine("\n A toi de jouer ");
+                    break;
+            }
         }
     }
 }
