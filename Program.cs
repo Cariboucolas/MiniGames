@@ -10,7 +10,6 @@ internal class MainClass
         private static Mot _word = new Mot();
         private static void Main(string[] args)
         {
-
             DisplayWelcome();
             DisplayLogo();
             DisplayChoiceMenu();
