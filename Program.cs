@@ -10,28 +10,27 @@ internal class MainClass
         private static Mot _word = new Mot();
         private static void Main(string[] args)
         {
+            //RandomPendu.RandomPendus();
             DisplayWelcome();
             DisplayLogo();
             DisplayChoiceMenu();
-            string playerChoice = Console.ReadLine();
+            int playerChoice = Convert.ToInt32(Console.ReadLine());
 
-            while (true)
+            if (playerChoice == 1)
             {
-                if (playerChoice == "1")
-                {
-                    _word.Run();
-                }
-                /*else if (playerChoice == "2")
-                {
-                    GameChoiceTwo();
-                }*/
-                else
-                {
-                    Console.WriteLine("Veuillez choisir une valeur 1, pour le Pendu ou 2, pour le Morpion.");
-                    playerChoice = Console.ReadLine();
-                }
+                _word.Run();
             }
+            /*else if (playerChoice == 2)
+            {
+                GameChoiceTwo();
+            }*/
+            else
+            {
+                Console.WriteLine("Veuillez choisir une valeur 1, pour le Pendu ou 2, pour le Morpion.");
+ 
             
+                playerChoice = Convert.ToInt32(Console.ReadLine());
+            }
         }
 
         static void DisplayWelcome() 
@@ -80,8 +79,6 @@ internal class MainClass
             Console.WriteLine("   `:+:        `-////-`      `.//`   ");
             Console.WriteLine("     ``    `:/+/:.  .-/+/::://:.     ");
             Console.WriteLine("            ``          ````         ");
-
-            Console.WriteLine("\nTu possèdes actuellement :" + Life.GetLife() + " vie");
         }
     }
 }

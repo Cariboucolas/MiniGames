@@ -16,6 +16,7 @@ namespace Project2
         // Fait tourner la boucle du jeu
         public void Run()
         {
+            
             PromptWord();
             DisplayWord();
             while (Life.GetLife() >= 0)
@@ -39,10 +40,23 @@ namespace Project2
             }
         }
 
+        public static void DisplayMenuPendu()
+        {
+            Console.WriteLine("**************************************");
+            Console.WriteLine("**************************************");
+            Console.WriteLine("*                                    *");
+            Console.WriteLine("*            JEU DU PENDU            *");
+            Console.WriteLine("*                                    *");
+            Console.WriteLine("**************************************");
+            Console.WriteLine("**************************************");
+            Console.Read();
+        }
+
         // Récupère le mot via l'entrée standard
         public void PromptWord()
         {
             Console.Clear();
+            DisplayMenuPendu();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Entre un mot en français : ");
             ConsoleKeyInfo keyInfo;
@@ -97,12 +111,12 @@ namespace Project2
             Dessin();
             if (Life.GetLife()>0)
             {
-                Console.WriteLine("\nTu possèdes actuellement :" + Life.GetLife() + " vie");
+                Console.WriteLine("\nTu possèdes actuellement :" + Life.GetLife() + " vie(s)");
             }
             else
             {
                 Console.WriteLine("\n Le mot était : " + _password);
-                Console.Write("\n Tu es mort merci de rejouer ");
+                Console.Write("\n Tu es mort ! Merci de rejouer ");
 
             }
         }
