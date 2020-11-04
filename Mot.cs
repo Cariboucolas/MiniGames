@@ -101,7 +101,7 @@ namespace Project2
             }
             else
             {
-                Console.WriteLine("\nLe mot était :" + _password);
+                Console.WriteLine("\n Le mot était : " + _password);
                 Console.Write("\n Tu es mort merci de rejouer ");
 
             }
@@ -114,7 +114,7 @@ namespace Project2
             switch (caseSwitch)
             {
                 case 0:
-                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ========= Y ===");
                     Console.WriteLine("     ||  /      |    ");
                     Console.WriteLine("     || /       |    ");
                     Console.WriteLine("     ||/        O    ");
@@ -127,7 +127,7 @@ namespace Project2
                     
                     break;
                 case 1:
-                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ========= Y ===");
                     Console.WriteLine("     ||  /      |    ");
                     Console.WriteLine("     || /       |    ");
                     Console.WriteLine("     ||/        O    ");
@@ -140,7 +140,7 @@ namespace Project2
                    
                     break;
                 case 2:
-                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ========= Y ===");
                     Console.WriteLine("     ||  /      |    ");
                     Console.WriteLine("     || /       |    ");
                     Console.WriteLine("     ||/        O    ");
@@ -153,7 +153,7 @@ namespace Project2
                    
                     break;
                 case 3:
-                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ========= Y ===");
                     Console.WriteLine("     ||  /      |    ");
                     Console.WriteLine("     || /       |    ");
                     Console.WriteLine("     ||/        O    ");
@@ -166,7 +166,7 @@ namespace Project2
                    
                     break;
                 case 4:
-                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ========= Y ===");
                     Console.WriteLine("     ||  /      |    ");
                     Console.WriteLine("     || /       |    ");
                     Console.WriteLine("     ||/             ");
@@ -179,7 +179,7 @@ namespace Project2
                  
                     break;
                 case 5:
-                    Console.WriteLine("     ========== Y ===");
+                    Console.WriteLine("     ========= Y ===");
                     Console.WriteLine("     ||  /           ");
                     Console.WriteLine("     || /            ");
                     Console.WriteLine("     ||/             ");
