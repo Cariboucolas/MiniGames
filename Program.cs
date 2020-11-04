@@ -14,21 +14,25 @@ internal class MainClass
             DisplayWelcome();
             DisplayLogo();
             DisplayChoiceMenu();
-            int playerChoice = Convert.ToInt32(Console.ReadLine());
+            string playerChoice = Console.ReadLine();
 
-            if (playerChoice == 1)
+            while (true)
             {
-                _word.Run();
+                if (playerChoice == "1")
+                {
+                    _word.Run();
+                }
+                /*else if (playerChoice == "2")
+                {
+                    GameChoiceTwo();
+                }*/
+                else
+                {
+                    Console.WriteLine("Veuillez choisir une valeur 1, pour le Pendu ou 2, pour le Morpion.");
+                    playerChoice = Console.ReadLine();
+                }
             }
-            /*else if (playerChoice == 2)
-            {
-                GameChoiceTwo();
-            }*/
-            else
-            {
-                Console.WriteLine("Veuillez choisir une valeur 1, pour le Pendu ou 2, pour le Morpion.");
-                playerChoice = Convert.ToInt32(Console.ReadLine());
-            }
+            
         }
 
         static void DisplayWelcome() 
