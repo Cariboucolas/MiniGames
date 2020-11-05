@@ -9,16 +9,18 @@ namespace Project2
     {
      
 
-        public static void RandomPendus()
+        public static string RandomPendus()
         {
 
             Random random = new Random();
-            var langages = new[] { "Java", "C#", "PHP", "SQL" };
+            var langages = new[] { "mailys", "colas", "gabriel", "fabien", "tomate","banane","parapluie","patate","audrey" };
             var rndMember = langages[random.Next(langages.Length)];
 
-            Console.WriteLine(rndMember);
+            return rndMember;
 
-            Console.Read();
+            //Console.WriteLine(rndMember);
+
+            //Console.Read();
 
         }
 
