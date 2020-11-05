@@ -7,20 +7,18 @@ internal class MainClass
 {
     private class Program
     {
-        private static PenduGame _word = new PenduGame();
         private static void Main(string[] args)
         {
-            
-            MainMenu.DisplayWelcome();
-
-            string playerChoice = Console.ReadLine();
 
             while(true)
             {
-                    if (playerChoice == "1")
+                Console.Clear();
+                DisplayMainMenu.DisplayWelcomeAndChoice();
+                string playerChoice = Console.ReadLine();
+
+                if (playerChoice == "1")
                 {
-                    //lance le pendu
-                    _word.Run();
+                    new HangmanGame().Run();
                 }
                 /*else if (playerChoice == 2)
                 {

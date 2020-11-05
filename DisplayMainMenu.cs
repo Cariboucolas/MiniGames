@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Project2
 {
-    class MainMenu
+    class DisplayMainMenu
     {
 
-       public static void DisplayWelcome()
+       public static void DisplayWelcomeAndChoice()
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("**************************************");
@@ -46,9 +46,7 @@ namespace Project2
             Console.WriteLine("*    1. PENDU    **    2. MORPION    *");
             Console.WriteLine("*                **                  *");
             Console.WriteLine("**************************************");
-            Console.WriteLine("**************************************");
-           
-          
+            Console.WriteLine("**************************************");   
         }
     }
 }

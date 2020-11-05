@@ -4,14 +4,12 @@ using System.Text;
 
 namespace Project2
 {
-    class DrawingPendu
+    class DrawingHangman
     {
 
-        public static void Draw()
+        public static void DrawStepHangman(int life)
         {
-            int caseSwitch = Life.GetLife();
-
-            switch (caseSwitch)
+            switch (life)
             {
                 case 0:
                     Console.WriteLine("     ========= Y ===");
@@ -145,7 +143,9 @@ namespace Project2
                     break;
 
                 default:
-                    Console.WriteLine("\n A toi de jouer ");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nTentes de trouver le mot.");
+                    Console.ForegroundColor = ConsoleColor.Green;
                     break;
             }
         }
