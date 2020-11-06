@@ -114,26 +114,6 @@ namespace Project2
             Console.Write("\n \n \n ");
             DrawingHangman.DrawStepHangman(_life);
             Console.WriteLine("\nTu possèdes actuellement : " + _life + " vie(s)");
-         
-
-            //ConsoleKeyInfo keyInfo;
-            //keyInfo = Console.ReadKey(true);
-            //if(keyInfo.Key != ConsoleKey.Enter)
-            //{
-            //    Environment.Exit(-1);
-            //}
-            //else
-            //{
-
-            //    Life.SetLife(Life.GetLife() + 10);
-            //    _password = RandomPendu.RandomPendus();
-
-            //    MainMenu.DisplayWelcome();
-
-            //    new PenduGame();
-
-            //}
-            //}
         }
     }
 }
