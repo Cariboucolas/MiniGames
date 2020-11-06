@@ -20,15 +20,14 @@ internal class MainClass
                 {
                     new HangmanGame().Run();
                 }
-                /*else if (playerChoice == 2)
+                /*else if (playerChoice == "2")
                 {
-
-                // lance le morpion
-                    GameChoiceTwo();
+                    Console.Clear();
+                    Console.WriteLine("WORK IN PROGRESS");
                 }*/
                 else
                 {
-                    Console.WriteLine("Veuillez choisir une valeur 1, pour le Pendu ou 2, pour le Morpion.");
+                    Console.WriteLine("Veuillez choisir valeur 1, pour le Pendu, valeur 2 est en en cours de construction.");
                     playerChoice = Console.ReadLine();
                 }
             }
