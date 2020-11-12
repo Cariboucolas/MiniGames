@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Project2
+namespace Project2.Hangman
 {
     class DrawingHangman
     {
