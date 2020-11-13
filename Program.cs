@@ -24,7 +24,9 @@ internal class MainClass
                 }
                 else if (playerChoice == "2")
                 {
+                    new DisplayBoardGame().ChooseName();
                     new DisplayBoardGame().DisplayBoardGames();
+                    
                 }
                  else
                 {
