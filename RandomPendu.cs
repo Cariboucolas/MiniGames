@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Project2.Hangman
+namespace Project2
 {
     public class RandomPendu
     {

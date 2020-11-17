@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Project2.Hangman
+namespace Project2
 {
    public  class ModeChoice
    {
