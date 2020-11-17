@@ -38,12 +38,12 @@ namespace Project2.Tictactoe
 
                 
 
-                Console.WriteLine(" colas : X " );
-                Console.WriteLine(" gab : O ");
+                Console.WriteLine();
+                Console.WriteLine();
                 Console.ReadLine();
             }
         }
-        public void ChooseName()
+        public void DisplayChooseName()
         {
 
             Console.Clear();
@@ -52,18 +52,19 @@ namespace Project2.Tictactoe
 
 
             Console.WriteLine("\nJoueur 1, entre ton nom :");
-            joueur1 = Console.ReadLine();
+            Player player1 = new Player();
+            player1.ChooseName();
 
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("\nBienvenue : " + joueur1);
+            Console.WriteLine("\nBienvenue : " + player1.PlayerName);
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("\nJoueur 2, entre ton nom :");
-            joueur2 = Console.ReadLine();
-            //joueur2 = Console.ReadKey();
+            Player player2 = new Player();
+            player2.ChooseName();
 
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nBienvenue : " + joueur2);
+            Console.WriteLine("\nBienvenue : " + player2.PlayerName);
             Console.ForegroundColor = ConsoleColor.White;
             Console.ReadLine();
 

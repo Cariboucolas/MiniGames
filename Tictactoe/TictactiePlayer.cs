@@ -2,19 +2,12 @@
 
 public class Player
 {
-	private string Name;
+	public string PlayerName { get; set; }
 
-	public Player(string Player1)
-	{
-		Name = Player1;
-	}
+    
 
-	public Player(string Player2)
-	{
-		Name = Player2;
-	}
-	public string ChooseName()
+    public void ChooseName()
     {
-		Console.ReadLine(Name);
+		PlayerName = Console.ReadLine();
 	}
 }
