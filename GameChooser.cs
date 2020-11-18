@@ -23,15 +23,15 @@ namespace Project2
 
         public void DisplayMenu()
         {
+            Output.Draw("**************************************\n" +
+                        "**************************************\n" +
+                        "*                                    *\n" +
+                        "*     BIENVENUE SUR WILD GAME !!     *\n" +
+                        "*                                    *\n" +
+                        "**************************************\n" +
+                        "**************************************\n",
+                        ConsoleColor.White);
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("**************************************");
-            Console.WriteLine("**************************************");
-            Console.WriteLine("*                                    *");
-            Console.WriteLine("*     BIENVENUE SUR WILD GAME !!     *");
-            Console.WriteLine("*                                    *");
-            Console.WriteLine("**************************************");
-            Console.WriteLine("**************************************");
 
             Output.Draw("      ```           ```              \n" +
                         "   -//::/+:.     -//////:`    -/++/. \n" +
@@ -49,19 +49,19 @@ namespace Project2
                         "            ``          ````         \n",
                         ConsoleColor.DarkRed);
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("**************************************");
-            Console.WriteLine("**************************************");
-            Console.WriteLine("*                                    *");
-            Console.WriteLine("*          CHOISIS TON JEU :         *");
-            Console.WriteLine("*         (Entrer une valeur)        *");
-            Console.WriteLine("**************************************");
-            Console.WriteLine("**************************************");
-            Console.WriteLine("*                **                  *");
-            Console.WriteLine("*    1. PENDU    **    2. MORPION    *");
-            Console.WriteLine("*                **                  *");
-            Console.WriteLine("**************************************");
-            Console.WriteLine("**************************************");
+            Output.Draw("**************************************\n" +
+                        "**************************************\n" +
+                        "*                                    *\n" +
+                        "*          CHOISIS TON JEU :         *\n" +
+                        "*         (Entrer une valeur)        *\n" +
+                        "**************************************\n" +
+                        "**************************************\n" +
+                        "*                **                  *\n" +
+                        "*    1. PENDU    **    2. MORPION    *\n" +
+                        "*                **                  *\n" +
+                        "**************************************\n" +
+                        "**************************************\n",
+                        ConsoleColor.White);
         }
     }
 }
