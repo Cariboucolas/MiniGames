@@ -6,7 +6,7 @@ namespace Project2
     {
         public string PlayerName { get; set; }
 
-        public string PlayerSymbol { get; set; }
+        public char PlayerSymbol { get; set; }
        
         public override string ToString()
         {
