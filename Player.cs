@@ -10,5 +10,14 @@ namespace Project2
         {
             PlayerName = Console.ReadLine();
         }
+        public string GetDisplayName()
+        {
+           return PlayerName;
+        }
+        Player player1 = new Player();
+
+
+
+
     }
 }

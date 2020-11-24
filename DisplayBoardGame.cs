@@ -4,12 +4,16 @@ namespace Project2
 {
     public class DisplayBoardGame
     {
-        public string joueur1 { get; set; }
-        public string joueur2 { get; set; }
+        public string player1 { get; set; }
+        public string player2 { get; set; }
+
+
+
 
         public void DisplayBoardGames()
         {
             char[] boardGame = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
             Console.Clear();
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
@@ -40,6 +44,9 @@ namespace Project2
             Console.WriteLine();
             Console.ReadLine();
         }
+        
+       
+       
 
         public void DisplayChooseName()
         {
@@ -47,8 +54,7 @@ namespace Project2
             DisplayMenuTicTacToe();
 
             Console.WriteLine("\nJoueur 1, entre ton nom :");
-            Player player1 = new Player();
-            player1.ChooseName();
+            Player.player1.ChooseName();
 
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("\nBienvenue : " + player1.PlayerName);
@@ -61,10 +67,18 @@ namespace Project2
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\nBienvenue : " + player2.PlayerName);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.ReadLine();
+            Console.ReadLine();         
+        }
+        public static void DisplayPlayerName()
+        {
+            Console.WriteLine(player1.GetDisplayName() + " ton symbole est X");
+            
+
+            Player player2 = new Player();
+            Console.WriteLine(player2.GetDisplayName() + " ton symbole est O");
         }
 
-        public static void DisplayMenuTicTacToe()
+        public void DisplayMenuTicTacToe()
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("**************************************");
@@ -75,6 +89,5 @@ namespace Project2
             Console.WriteLine("**************************************");
             Console.WriteLine("**************************************");
         }
-        
     }
 }

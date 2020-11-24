@@ -6,10 +6,13 @@ namespace Project2
         {
             private static void Main(string[] args)
             {
-                GameChooser chooser = new GameChooser();
-                chooser.DisplayMenu();
-                Game game = chooser.Choose();
-                game.Run();
+               
+                    GameChooser chooser = new GameChooser();
+                    chooser.DisplayMenu();
+                    Game game = chooser.Choose();
+                    game.Run();
+                
+                
             }
         }
     }
