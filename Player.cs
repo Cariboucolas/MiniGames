@@ -6,18 +6,13 @@ namespace Project2
     {
         public string PlayerName { get; set; }
 
-        public void ChooseName()
+        public string PlayerSymbol { get; set; }
+       
+        public override string ToString()
         {
-            PlayerName = Console.ReadLine();
+            return this.PlayerName + " ton symbole est : " + this.PlayerSymbol;
+            
         }
-        public string GetDisplayName()
-        {
-           return PlayerName;
-        }
-        Player player1 = new Player();
-
-
-
-
     }
+    
 }

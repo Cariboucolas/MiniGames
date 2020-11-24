@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Project2
 {
     public class DisplayBoardGame
@@ -48,34 +49,16 @@ namespace Project2
        
        
 
-        public void DisplayChooseName()
+      
+        public void DisplayPlayerName()
         {
-            Console.Clear();
-            DisplayMenuTicTacToe();
+            Player player1 = new Player();
 
-            Console.WriteLine("\nJoueur 1, entre ton nom :");
-            Player.player1.ChooseName();
-
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("\nBienvenue : " + player1.PlayerName);
-
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("\nJoueur 2, entre ton nom :");
-            Player player2 = new Player();
-            player2.ChooseName();
-
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nBienvenue : " + player2.PlayerName);
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.ReadLine();         
-        }
-        public static void DisplayPlayerName()
-        {
-            Console.WriteLine(player1.GetDisplayName() + " ton symbole est X");
+            Console.WriteLine(player1.PlayerName + " ton symbole est X");
             
 
             Player player2 = new Player();
-            Console.WriteLine(player2.GetDisplayName() + " ton symbole est O");
+            Console.WriteLine(player2.PlayerName + " ton symbole est O");
         }
 
         public void DisplayMenuTicTacToe()
