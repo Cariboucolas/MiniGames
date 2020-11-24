@@ -4,11 +4,11 @@ namespace Project2
 {
     public class DisplayBoardGame
     {
+
         public string player1 { get; set; }
         public string player2 { get; set; }
-
-
-
+       
+       
 
         public void DisplayBoardGames()
         {
@@ -52,32 +52,27 @@ namespace Project2
         {
             Console.Clear();
             DisplayMenuTicTacToe();
-
+            
             Console.WriteLine("\nJoueur 1, entre ton nom :");
-            Player.player1.ChooseName();
+            Player player1 = new Player();
+            player1.ChooseName();
 
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("\nBienvenue : " + player1.PlayerName);
+            Console.WriteLine("\nBienvenue " + player1.PlayerName + " : ton symbole est X");
+        
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("\nJoueur 2, entre ton nom :");
             Player player2 = new Player();
             player2.ChooseName();
-
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nBienvenue : " + player2.PlayerName);
+            Console.WriteLine("\nBienvenue " + player2.PlayerName + " : ton symbole est O");
+
             Console.ForegroundColor = ConsoleColor.White;
+
             Console.ReadLine();         
         }
-        public static void DisplayPlayerName()
-        {
-            Console.WriteLine(player1.GetDisplayName() + " ton symbole est X");
-            
-
-            Player player2 = new Player();
-            Console.WriteLine(player2.GetDisplayName() + " ton symbole est O");
-        }
-
+     
         public void DisplayMenuTicTacToe()
         {
             Console.ForegroundColor = ConsoleColor.White;

@@ -14,7 +14,7 @@ namespace Project2
         {
            return PlayerName;
         }
-        Player player1 = new Player();
+       
 
 
 
