@@ -55,7 +55,6 @@ namespace Project2
             Console.WriteLine(player2);
 
             Console.ReadLine();
-
         }
         public Player NewPlayer(string symbol, int numero, ConsoleColor color )
         {
