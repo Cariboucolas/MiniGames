@@ -57,30 +57,52 @@ namespace Project2
                 Console.WriteLine(player1);
                 Console.WriteLine(player2);
 
-                if (IsPlayerWin(boardGame))
+                if (IsPlayerWin(boardGame, currentPlayer.PlayerSymbol))
                 {
-                    Console.WriteLine(currentPlayer.PlayerName + " a gagner!!!");
+                    Console.WriteLine(currentPlayer.PlayerName + " a gagné!!!");
                     Console.ReadLine();
                     return;
                 }
+
                 var selectedCase = Convert.ToInt16(Console.ReadLine());
                 if (IsSelectedCase(selectedCase,boardGame))
                 {
-                    Console.WriteLine("Error");
+                    Console.WriteLine("Cette case est déja prise, choisissez-en une autre :");
                     Console.ReadLine();
                     continue;
                 }
 
                 boardGame[selectedCase - 1] = currentPlayer.PlayerSymbol;
-
-                currentPlayer = currentPlayer == player1 ? player2 : player1;
+                if (IsPlayerWin(boardGame, currentPlayer.PlayerSymbol) == false)
+                {
+                    if (currentPlayer == player1)
+                    {
+                        currentPlayer = player2;
+                    }
+                    else if (currentPlayer == player2)
+                    {
+                        currentPlayer = player1;
+                    }
+                }
+                
+                // ou
+                // currentPlayer = currentPlayer == player1 ? player2 : player1;
             }
         }
 
-        private bool IsPlayerWin(char[] boardGame)
+        private bool IsPlayerWin(char[] boardGame, char currentPlayer)
         {
+            var symbol = currentPlayer;
+            return boardGame[0] == symbol && boardGame[1] == symbol && boardGame[2] == symbol ||
+                   boardGame[3] == symbol && boardGame[4] == symbol && boardGame[5] == symbol ||
+                   boardGame[6] == symbol && boardGame[7] == symbol && boardGame[8] == symbol ||
 
-            return boardGame[0] == 'X' && boardGame[1] == 'X' && boardGame[2] == 'X';
+                   boardGame[0] == symbol && boardGame[3] == symbol && boardGame[6] == symbol ||
+                   boardGame[1] == symbol && boardGame[4] == symbol && boardGame[7] == symbol ||
+                   boardGame[2] == symbol && boardGame[5] == symbol && boardGame[8] == symbol ||
+
+                   boardGame[0] == symbol && boardGame[4] == symbol && boardGame[8] == symbol ||
+                   boardGame[2] == symbol && boardGame[4] == symbol && boardGame[6] == symbol;
         }
 
         private bool IsSelectedCase(short selectedCase, char[] boardGame)
