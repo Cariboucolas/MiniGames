@@ -74,7 +74,7 @@ namespace Project2
                     continue;
                 }
 
-                IsPlayerEqual(boardGame, currentPlayer.PlayerSymbol);
+                // IsPlayerEqual(boardGame, currentPlayer.PlayerSymbol);
 
                 boardGame[selectedCase - 1] = currentPlayer.PlayerSymbol;
                 if (IsPlayerWin(boardGame, currentPlayer.PlayerSymbol) == false)
@@ -109,16 +109,16 @@ namespace Project2
                    boardGame[2] == symbol && boardGame[4] == symbol && boardGame[6] == symbol;
         }
 
-        private void IsPlayerEqual(char[] boardGame, char currentPlayer)
+        /*private void IsPlayerEqual(char[] boardGame, char currentPlayer)
         {
             for (int i = 0; i < boardGame.Length; i++)
             {
-                if (boardGame.Length == 5 * 'X')
+                if (boardGame.Length == selectedCase )
                 {
                     Console.WriteLine("Vous êtes ex aequo.");
                 }
             }
-        }
+        }*/
 
         private bool IsSelectedCase(short selectedCase, char[] boardGame)
         {
