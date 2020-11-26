@@ -11,87 +11,91 @@ namespace Project2
 
         public override void Run()
         {
-            Console.Clear();
+            
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("**************************************");
-            Console.WriteLine("**************************************");
-            Console.WriteLine("*                                    *");
-            Console.WriteLine("*     BIENVENUE SUR LE MORPION !!    *");
-            Console.WriteLine("*                                    *");
-            Console.WriteLine("**************************************");
-            Console.WriteLine("**************************************");
+                Console.Clear();
+
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("**************************************");
+                Console.WriteLine("**************************************");
+                Console.WriteLine("*                                    *");
+                Console.WriteLine("*     BIENVENUE SUR LE MORPION !!    *");
+                Console.WriteLine("*                                    *");
+                Console.WriteLine("**************************************");
+                Console.WriteLine("**************************************");
 
             
-            Player player1 = NewPlayer('X', 1, ConsoleColor.Red);
-            Player player2 = NewPlayer('O', 2, ConsoleColor.Blue);
+                Player player1 = NewPlayer('X', 1, ConsoleColor.Red);
+                Player player2 = NewPlayer('O', 2, ConsoleColor.Blue);
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.ReadLine();
-
-            char[] boardGame = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-            var currentPlayer = player1;
-            while(true)
-            { 
-                Console.Clear();
-                Console.BackgroundColor = ConsoleColor.White;
-                Console.ForegroundColor = ConsoleColor.Black;
-                Console.WriteLine("       -------------------------       ");
-                Console.WriteLine("       |       |       |       |       ");
-                Console.WriteLine("       |   {0}   |   {1}   |   {2}   |       ", boardGame[0], boardGame[1], boardGame[2]);
-                Console.WriteLine("       |       |       |       |       ");
-                Console.WriteLine("       -------------------------       ");
-                Console.WriteLine("       |       |       |       |       ");
-                Console.WriteLine("       |   {0}   |   {1}   |   {2}   |       ", boardGame[3], boardGame[4], boardGame[5]);
-                Console.WriteLine("       |       |       |       |       ");
-                Console.WriteLine("       -------------------------       ");
-                Console.WriteLine("       |       |       |       |       ");
-                Console.WriteLine("       |   {0}   |   {1}   |   {2}   |       ", boardGame[6], boardGame[7], boardGame[8]);
-                Console.WriteLine("       |       |       |       |       ");
-                Console.WriteLine("       -------------------------       ");
-                Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine();
-                Console.WriteLine();
+                Console.ReadLine();
 
-                Console.WriteLine(player1);
-                Console.WriteLine(player2);
+                char[] boardGame = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+                var currentPlayer = player1;
+            for (int i = 0; i < 9; i++)
+            {
+                Console.Clear();
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine("       -------------------------       ");
+                    Console.WriteLine("       |       |       |       |       ");
+                    Console.WriteLine("       |   {0}   |   {1}   |   {2}   |       ", boardGame[0], boardGame[1], boardGame[2]);
+                    Console.WriteLine("       |       |       |       |       ");
+                    Console.WriteLine("       -------------------------       ");
+                    Console.WriteLine("       |       |       |       |       ");
+                    Console.WriteLine("       |   {0}   |   {1}   |   {2}   |       ", boardGame[3], boardGame[4], boardGame[5]);
+                    Console.WriteLine("       |       |       |       |       ");
+                    Console.WriteLine("       -------------------------       ");
+                    Console.WriteLine("       |       |       |       |       ");
+                    Console.WriteLine("       |   {0}   |   {1}   |   {2}   |       ", boardGame[6], boardGame[7], boardGame[8]);
+                    Console.WriteLine("       |       |       |       |       ");
+                    Console.WriteLine("       -------------------------       ");
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
+                    Console.WriteLine();
 
-                if (IsPlayerWin(boardGame, currentPlayer.PlayerSymbol))
-                {
-                    Console.WriteLine(currentPlayer.PlayerName + " a gagné!!!");
-                    Console.ReadLine();
-                    return;
-                }
+                    Console.WriteLine(player1);
+                    Console.WriteLine(player2);
 
-                Console.Write("\n" + currentPlayer.PlayerName + " à vous de jouer : ");
-
-                var selectedCase = Convert.ToInt16(Console.ReadLine());
-                if (IsSelectedCase(selectedCase,boardGame))
-                {
-                    Console.WriteLine("Cette case est déja prise, choisissez-en une autre :");
-                    Console.ReadLine();
-                    continue;
-                }
-
-                // IsPlayerEqual(boardGame, currentPlayer.PlayerSymbol);
-
-                boardGame[selectedCase - 1] = currentPlayer.PlayerSymbol;
-                if (IsPlayerWin(boardGame, currentPlayer.PlayerSymbol) == false)
-                {
-                    if (currentPlayer == player1)
+                    if (IsPlayerWin(boardGame, currentPlayer.PlayerSymbol))
                     {
-                        currentPlayer = player2;
+                        Console.WriteLine(currentPlayer.PlayerName + " a gagné!!!");
+                        Console.ReadLine();
+                        return;
                     }
-                    else if (currentPlayer == player2)
+
+                    Console.Write("\n" + currentPlayer.PlayerName + " à vous de jouer : ");
+
+                    var selectedCase = Convert.ToInt16(Console.ReadLine());
+                    if (IsSelectedCase(selectedCase, boardGame))
                     {
-                        currentPlayer = player1;
+                        Console.WriteLine("Cette case est déja prise, choisissez-en une autre :");
+                        Console.ReadLine();
+                        continue;
                     }
+
+                    // IsPlayerEqual(boardGame, currentPlayer.PlayerSymbol);
+
+                    boardGame[selectedCase - 1] = currentPlayer.PlayerSymbol;
+                    if (IsPlayerWin(boardGame, currentPlayer.PlayerSymbol) == false)
+                    {
+                        if (currentPlayer == player1)
+                        {
+                            currentPlayer = player2;
+                        }
+                        else if (currentPlayer == player2)
+                        {
+                            currentPlayer = player1;
+                        }
+                    }
+
+                    // ou
+                    // currentPlayer = currentPlayer == player1 ? player2 : player1;
                 }
-                
-                // ou
-                // currentPlayer = currentPlayer == player1 ? player2 : player1;
-            }
+            
+            Console.WriteLine("Execo redemarre le jeu");
         }
 
         private bool IsPlayerWin(char[] boardGame, char currentPlayer)
