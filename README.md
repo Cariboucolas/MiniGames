@@ -5,7 +5,12 @@
 This is the second project of our cursus, started in September 2020 in Toulouse.
 
 Create a Tic Tac Toe and a Hangman Game with C#.
- 
+
+## Screenshots :
+
+![Main Menu](images/mainmenuminigames.JPG)
+![Hangman Game](images/penduminigames.JPG)
+![Tictactoe Game](images/morpionminigames.JPG)
 
 ## Authors
 - Colas Durcy alias "LE BOSS"
