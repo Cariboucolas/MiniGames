@@ -72,7 +72,7 @@ namespace Project2
                 var selectedCase = Convert.ToInt16(Console.ReadLine());
                 if (IsSelectedCase(selectedCase, boardGame))
                 {
-                    Console.WriteLine("Cette case est déja prise, choisissez-en une autre :");
+                    Console.WriteLine("Cette case est déja prise, choisissez-en une autre");
                     Console.ReadLine();
                     continue;
                 }

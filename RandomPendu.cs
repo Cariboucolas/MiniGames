@@ -10,7 +10,7 @@ namespace Project2
         {
 
             Random random = new Random();
-            var langages = new[] { "mailys", "colas", "gabriel", "fabien", "tomate","banane","parapluie","patate","audrey" };
+            var langages = new[] { "poutre", "pitou", "reculer", "chocolatine" };
             var rndMember = langages[random.Next(langages.Length)];
 
             return rndMember;
