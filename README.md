@@ -13,10 +13,8 @@ Create a Tic Tac Toe and a Hangman Game with C#.
 ![Tictactoe Game](images/morpionminigames.JPG)
 
 ## Authors
-- Colas Durcy alias "LE BOSS"
-- Fabien Desnoues alias "Le MAC"
-- Gabriel Said Omar alias"Le BLACK"
-- Maïlys Dumas alias "Kaly"
+- Colas Durcy 
+- Fabien Desnoues 
+- Maïlys Dumas 
 
 
-Un homme sans culture, c'est comme un zèbre sans rayure.
